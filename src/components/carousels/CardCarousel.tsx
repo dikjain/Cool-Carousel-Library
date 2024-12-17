@@ -1,4 +1,3 @@
-import { PawPrint } from 'lucide-react';
 import React, { useState } from 'react';
 
 interface CardCarouselProps {

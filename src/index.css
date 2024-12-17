@@ -44,20 +44,55 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  background: black;
 }
 
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 50px;
+  min-height: 150px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  background: #7c3aed;
+  border-radius: 50px;
+  min-height: 150px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #9f7aea;
+}
+
+.loader-bar {
+  transition: width 1s linear;
+}
+
+.glitch-layer {
+  animation: glitch 0.5s infinite linear alternate;
+}
+
+.glitch-layer.delay-1 {
+  animation-delay: 0.2s;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+  }
+  20% {
+    transform: translate(-5px, 5px) skew(-0.5deg, 0.5deg);
+  }
+  40% {
+    transform: translate(5px, -5px) skew(0.5deg, -0.5deg);
+  }
+  60% {
+    transform: translate(-5px, -5px) skew(-0.5deg, -0.5deg);
+  }
+  80% {
+    transform: translate(5px, 5px) skew(0.5deg, 0.5deg);
+  }
+  100% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+  }
 }

@@ -8,7 +8,7 @@ interface CodeBlockProps {
   language: string;
 }
 
-export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
+export const CodeBlock: React.FC<CodeBlockProps> = ({ code }) => {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {
